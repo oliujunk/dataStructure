@@ -5,6 +5,11 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "debug",
+            "type": "shell",
+            "command": "./debug"
+        },
+        {
             "label": "build",
             "type": "shell",
             "command": "./build"

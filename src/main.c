@@ -2,14 +2,18 @@
 
 int main(void)
 {
+    long runTime = 0;
+    
     int value = 0;
-    int array[1000] = {0};
+    int array[100] = {0};
 
-    getRandomIntArray(1000, array);
+    GetRandomIntArray(100, array);
 
-    value = MaxSubsequenceSum4(array, 1000);
+    value = MaxSubsequenceSum4(array, 100);
 
-    return value;
+    runTime = GetRunTime();
+
+    return 0;
 }
 
 void BubbleSort(int *source, int length)    //降序
@@ -105,7 +109,7 @@ static int MaxSubSum(int A[], int left, int right)
             maxRightBorderSum = rightBorderSum;
     }
 
-    return max3(maxLeftSum, maxRightSum, maxLeftBorderSum+maxRightBorderSum);
+    return Max3(maxLeftSum, maxRightSum, maxLeftBorderSum+maxRightBorderSum);
 }
 
 int MaxSubsequenceSum3(int array[], int N)
@@ -127,4 +131,20 @@ int MaxSubsequenceSum4(int array[], int N)
     }
 
     return maxSum;
+}
+
+int BinarySearch(int array[], int X, int N)
+{
+    int low = 0, mid = 0, high = N - 1;
+    while(low <= high)
+    {
+        mid = (low + high) / 2;
+        if(array[mid] < X)
+            low = mid + 1;
+        else if(array[mid] > X)
+            high = mid - 1;
+        else
+            return mid;
+    }
+    return -1;
 }
