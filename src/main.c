@@ -11,6 +11,8 @@ int main(void)
 
     value = MaxSubsequenceSum4(array, 100);
 
+    value = Gcd(10, 15);
+
     runTime = GetRunTime();
 
     return 0;

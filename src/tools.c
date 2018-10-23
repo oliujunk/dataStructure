@@ -37,3 +37,15 @@ long GetRunTime(void)
 {
     return clock();
 }
+
+unsigned int Gcd(unsigned int m, unsigned int n)
+{
+    unsigned int rem = 0;
+    while(n > 0)
+    {
+        rem = m % n;
+        m = n;
+        n = rem;
+    }
+    return m;
+}

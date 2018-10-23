@@ -22,5 +22,8 @@ void GetRandomIntArray(int length, int *ouput);
 //获取程序运行的时间单元
 long GetRunTime(void);
 
+//获取两个正整数的最大公因子
+unsigned int Gcd(unsigned int m, unsigned int n);
+
 
 #endif
