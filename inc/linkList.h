@@ -3,18 +3,16 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 typedef int ElementType;
 
+struct Node;
 typedef struct Node *PtrToNode;
 typedef PtrToNode List;
 typedef PtrToNode Position;
 
-struct Node
-{
-    ElementType element;
-    Position next;
-};
+
 
 //判断链表是否为空，为空返回1，否则返回0
 int IsEmpty(List l);

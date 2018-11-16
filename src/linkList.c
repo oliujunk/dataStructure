@@ -1,5 +1,11 @@
 #include "linkList.h"
 
+struct Node
+{
+    ElementType element;
+    Position next;
+};
+
 int IsEmpty(List l)
 {
     return l->next == NULL;
@@ -51,7 +57,7 @@ void Insert(ElementType x, List l, Position p)
     Position tmpCell = NULL;
     tmpCell = malloc(sizeof(struct Node));
     if(tmpCell == NULL)
-        FatalError("Out of space!!!");
+        printf("Out of space!!!");
 
     tmpCell->element = x;
     tmpCell->next = p->next;
